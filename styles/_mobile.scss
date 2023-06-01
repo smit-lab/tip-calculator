@@ -1,0 +1,48 @@
+@media (max-width: 768px) {
+  body{
+    display: block;
+  }
+  header {
+    margin-bottom: rem(36);
+  }
+  .card {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: rem(32);
+    padding: rem(32) rem(20); 
+    border-radius: rem(25) rem(25) 0 0;
+  }
+  
+.bill,
+.tip {
+  margin-bottom: rem(32);
+}
+
+  .inputs {
+    padding: 0 rem(8);
+  }
+
+  .tip-selection {
+    grid-template-columns: 1fr 1fr;
+    gap: rem(16);
+  }
+
+  .bill-value {
+    width: 100%;
+  }
+
+  .result {
+    padding: rem(22);
+    gap: rem(32);
+    padding: rem(36) rem(23) rem(24);
+
+
+    &-bill-price {
+      font-size: rem(32);
+    }
+    &-txt-tip:first-child {
+      margin-bottom: rem(20);
+    }
+  }
+}

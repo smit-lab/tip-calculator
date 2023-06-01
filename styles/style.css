@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.2;
+}
+
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: "Space Mono", monospace;
+  height: 100vh;
+  background-color: hsl(185, 41%, 84%);
+}
+
+header {
+  display: grid;
+  place-content: center;
+  margin: 1.875rem 0 5rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  background-color: hsl(0, 0%, 100%);
+  height: 30.0625rem;
+  width: 57.5rem;
+  border-radius: 1.5625rem;
+  padding: 2rem;
+}
+
+.bill,
+.tip {
+  margin-bottom: 2.5rem;
+}
+
+.input-field {
+  position: relative;
+}
+
+.value-heading,
+.result-heading {
+  display: block;
+  font-size: 1rem;
+  color: hsl(186, 14%, 43%);
+  margin-bottom: 1rem;
+}
+
+.svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.1875rem;
+}
+
+.bill-value::-webkit-outer-spin-button,
+.bill-value::-webkit-inner-spin-button,
+.tip-selection-custom::-webkit-outer-spin-button,
+.tip-selection-custom::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.bill-value[type=number],
+.tip-selection-custom[type=number] {
+  appearance: textfeild;
+  -moz-appearance: textfield;
+}
+
+input {
+  font-family: "Space Mono", monospace;
+}
+
+.bill-value {
+  width: 100%;
+  height: 3rem;
+  padding: 0 1.0625rem 0 3.125rem;
+}
+
+.bill-value,
+.tip-selection-custom {
+  font-size: 1.5rem;
+  text-align: right;
+  border-radius: 0.3125rem;
+  outline: 0.125rem solid transparent;
+  border: none;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(189, 41%, 97%);
+}
+
+.bill-value:focus,
+.tip-selection-custom:focus {
+  outline: 0.125rem solid hsl(172, 67%, 45%);
+}
+
+.tip-selection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem 0.875rem;
+}
+.tip-selection-values {
+  cursor: pointer;
+  display: inline-block;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 0.3125rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
+  padding: 0.5rem 0;
+}
+.tip-selection-custom {
+  padding-right: 0.8125rem;
+}
+
+.tip-selection-values,
+.tip-selection-custom {
+  width: 100%;
+  height: 3rem;
+}
+
+.result {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 0.9375rem;
+  padding: 2.5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.result-heading {
+  color: hsl(0, 0%, 100%);
+  margin: 0;
+}
+.result-subheading {
+  font-size: 0.8125rem;
+  line-height: 1.46;
+  color: hsl(184, 14%, 56%);
+}
+.result-bill-price {
+  color: hsl(172, 67%, 45%);
+  font-size: 3rem;
+  line-height: 1.48;
+  letter-spacing: -1px;
+}
+.result-txt-tip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.result-txt-tip:first-child {
+  margin-bottom: 1.5625rem;
+}
+.result-reset-btn {
+  width: 100%;
+  height: 3rem;
+  background-color: hsl(172, 67%, 45%);
+  border: none;
+  border-radius: 0.3125rem;
+  font-family: "Space Mono";
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: hsl(183, 100%, 15%);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.result-reset-btn[disabled] {
+  background-color: hsl(183, 79%, 24%);
+  color: hsla(183.2, 100%, 15%, 0.75);
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  body {
+    display: block;
+  }
+  header {
+    margin-bottom: 2.25rem;
+  }
+  .card {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 2rem;
+    padding: 2rem 1.25rem;
+    border-radius: 1.5625rem 1.5625rem 0 0;
+  }
+  .bill,
+  .tip {
+    margin-bottom: 2rem;
+  }
+  .inputs {
+    padding: 0 0.5rem;
+  }
+  .tip-selection {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .bill-value {
+    width: 100%;
+  }
+  .result {
+    padding: 1.375rem;
+    gap: 2rem;
+    padding: 2.25rem 1.4375rem 1.5rem;
+  }
+  .result-bill-price {
+    font-size: 2rem;
+  }
+  .result-txt-tip:first-child {
+    margin-bottom: 1.25rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
